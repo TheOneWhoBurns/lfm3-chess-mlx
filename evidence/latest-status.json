@@ -1,0 +1,18 @@
+{
+  "historical_source": ".artifacts/chess/scale-v1/background-launch/unload-20261102.json",
+  "historical_source_sha256": "b29dff1a6ca9630ef881579f21c0306533a8d4b17b88fb242c51e6c0fa600cef",
+  "extraction_scope": "Saved status, not a live process check; personal paths, process IDs and owner message omitted.",
+  "result": {
+    "timestamp_utc": "2026-11-02T14:39:28.650169+00:00",
+    "completed_groups": 205,
+    "optimizer_updates": 190,
+    "hashes_verified": {
+      "adapters.safetensors": "c7af3616109811478810b164b2c6e42d5bf9fb3ad737b29e806beaab765028a9",
+      "optimizer.safetensors": "c3c88b26fabca743d6e9a47f59e7b28a0d1dd06783ea583c83b3707d50b85507"
+    },
+    "unsaved_updates_discarded": false,
+    "controller_trainer_inhibitor_exited": true,
+    "launchd_unloaded": true,
+    "goal": "paused"
+  }
+}

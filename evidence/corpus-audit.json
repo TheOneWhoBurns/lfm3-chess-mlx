@@ -1,0 +1,76 @@
+{
+  "historical_source": ".artifacts/chess/scale-v1/audit/report.json",
+  "historical_source_sha256": "acd1f1c7327a2d2cae0984da84d710598c62f6dc26c5b483f43ab12080ccfc96",
+  "extraction_scope": "Summary counts and hashes only; no board states, game records or labels.",
+  "result": {
+    "passed": true,
+    "corpus_manifest_sha256": "ee621cd4a93b3a944dbf374dedb5aea8743eb475e1cb0722a644479f8c6b00ac",
+    "splits": {
+      "train": {
+        "positions": 2000000,
+        "game_trajectories": 794544,
+        "maximum_positions_per_game": 11,
+        "categories": {
+          "white/middlegame": 535738,
+          "black/middlegame": 542015,
+          "black/opening": 340477,
+          "white/endgame": 116705,
+          "white/opening": 348379,
+          "black/endgame": 116686
+        },
+        "coverage_tags": {
+          "in_check": 137247,
+          "castling_available": 384643,
+          "promotion_available": 42259,
+          "en_passant_available": 9377
+        }
+      },
+      "valid": {
+        "positions": 50000,
+        "game_trajectories": 33779,
+        "maximum_positions_per_game": 2,
+        "categories": {
+          "white/endgame": 7500,
+          "black/endgame": 7500,
+          "white/middlegame": 12500,
+          "black/middlegame": 12500,
+          "white/opening": 5000,
+          "black/opening": 5000
+        },
+        "coverage_tags": {
+          "promotion_available": 2035,
+          "in_check": 4179,
+          "en_passant_available": 214,
+          "castling_available": 7018
+        }
+      },
+      "test": {
+        "positions": 100000,
+        "game_trajectories": 67607,
+        "maximum_positions_per_game": 2,
+        "categories": {
+          "white/endgame": 15000,
+          "black/endgame": 15000,
+          "white/middlegame": 25000,
+          "black/middlegame": 25000,
+          "white/opening": 10000,
+          "black/opening": 10000
+        },
+        "coverage_tags": {
+          "promotion_available": 3895,
+          "in_check": 8484,
+          "en_passant_available": 389,
+          "castling_available": 14102
+        }
+      }
+    },
+    "position_overlap": 0,
+    "trajectory_overlap": 0,
+    "previous_position_overlap": 0,
+    "targets_in_input": false,
+    "source_sha256": "aaa93b200aa44f22207f4a8787b57505a939d8a64347187a88f61e8d856f8aa1",
+    "index_reader_sha256": "3f8b01c080920806aa6e6b02faebaa0c22b3115ca684eca398cd61a13b3e569e",
+    "indexed_random_access_verified": true,
+    "scope": "Dataset system audit only; includes sealed-split hygiene but never queries a model or reveals test labels."
+  }
+}

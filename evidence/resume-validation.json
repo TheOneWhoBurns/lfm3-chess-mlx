@@ -1,0 +1,31 @@
+{
+  "historical_source": ".artifacts/chess/exploration-resume-v3/report.json",
+  "historical_source_sha256": "d4a818c0ef47acee931517779bf6388edf775c701ee0ef14b92a151644814a4b",
+  "extraction_scope": "Diagnostic results and source hashes only; no tensors or sampled records.",
+  "result": {
+    "passed": true,
+    "scope": "Real trainer CLI, SIGTERM checkpoint at a completed group, fresh-process exact Adam and seeded-mixture continuation; diagnostic fixture only",
+    "interrupted_checkpoint": 2,
+    "tensor_equality": {
+      "adapters.safetensors": {
+        "tensors": 215,
+        "max_error": 0.0
+      },
+      "optimizer.safetensors": {
+        "tensors": 432,
+        "max_error": 0.0
+      }
+    },
+    "rollouts_exact": true,
+    "source_hashes": {
+      "experiments/chess/train_rl.py": "be020ee899e1ca6a56402c47f874781f3d1299504b945520c81852293c95c25c",
+      "experiments/chess/exploration.py": "9de27f8cc0ab7f06f1ed18c0488e0be5d052bc4752b5c33c7a2e8daac1cad385",
+      "experiments/chess/rewards.py": "69a6187cb6c741d8ccb286334d105f6c836ae0955b698518c8465afcfd7ea466",
+      "experiments/chess/rl_policy.py": "a530a24873b2a5d818d0ce2745c285ee79973f391ef671cda7ae4e88bf911de8",
+      "experiments/chess/batched_policy.py": "af575a0eea8897b86bd6652166f641c089c1bff8bc4df2b206f9f2932a3d812f",
+      "experiments/chess/rl_scoring.py": "5f75469f4499c37fbb90d1eb387c13e4ed80e3c2794ac73e382baf659044be11",
+      "experiments/chess/rl_batched_scoring.py": "738920012c91cac30c1699a3f66ee886196fcb6d1e399deb3623527cf4ee0808",
+      "experiments/chess/validate_exploration_resume.py": "c0ae1a244f2f2ca32ee52b74d852cb6fa67b914ed8e24e69a9a1c51a7ed4a156"
+    }
+  }
+}

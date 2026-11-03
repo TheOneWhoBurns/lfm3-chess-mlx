@@ -1,0 +1,49 @@
+# Local runtime and experiment artifacts
+.artifacts/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+# Secrets and machine configuration
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+.ssh/
+.codex/
+.agents/
+
+# Weights, datasets, checkpoints and logs are never source artifacts
+*.safetensors
+*.gguf
+*.ggml
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.jsonl
+*.jsonl.idx
+*.pgn
+*.zst
+*.sqlite*
+*.db
+*.log
+*.partial
+/checkpoints/
+/models/
+/data/
+/runs/
+
+# Generated packaging files
+mlx_lm/_version.py
+build/
+dist/
+*.egg-info/

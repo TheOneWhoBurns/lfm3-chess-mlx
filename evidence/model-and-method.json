@@ -1,0 +1,129 @@
+{
+  "historical_source": ".artifacts/chess/scale-v1/large-rl-exploration-v2/attempt-0003/checkpoints/205/adapter_config.json",
+  "historical_source_sha256": "cd67228ad9244229926d27d01317572b1968dc1040bb05e7e29c4e048fb91b5b",
+  "extraction_scope": "Selected method metadata; model provenance cross-checked with calibration notes and local config, hardware with system_profiler. No weights, absolute paths, tokens or board examples.",
+  "result": {
+    "training_kind": "match_priority_policy_gradient",
+    "fine_tune_type": "lora",
+    "num_layers": 16,
+    "lora_parameters": {
+      "rank": 8,
+      "scale": 16.0,
+      "dropout": 0.0
+    },
+    "training_positions": 2000000,
+    "model_hashes": {
+      "model.safetensors": "c5c4728a6848517b053e61d40ec705c2684c2cd9bc266a209edd0ebf379b92a2"
+    },
+    "algorithm": "leave-one-out base advantages with negative illegal floor plus uncentered exact bonus; syntax-only mixture exploration; entropy and uniform-to-policy KL on branching tokens; match-prioritized gradient; summed PPO surrogate; clip=0.2",
+    "input_representation": "board",
+    "board_encoding": {
+      "version": "board_tensor_semantic_v2",
+      "squares": "a8 through h1, rank-major",
+      "piece_channels": [
+        ".",
+        "P",
+        "N",
+        "B",
+        "R",
+        "Q",
+        "K",
+        "p",
+        "n",
+        "b",
+        "r",
+        "q",
+        "k"
+      ],
+      "board_shape": [
+        8,
+        8,
+        13
+      ],
+      "en_passant_shape": [
+        8,
+        8,
+        1
+      ],
+      "state_features": [
+        "white_to_move_signed",
+        "white_kingside",
+        "white_queenside",
+        "black_kingside",
+        "black_queenside",
+        "halfmove_clock_div_150",
+        "log1p_fullmove_div_10"
+      ],
+      "embedding_slots": 262,
+      "history": "FEN state only; repetition history not represented",
+      "square_embedding_layout": [
+        "color",
+        "piece_kind",
+        "file",
+        "rank"
+      ],
+      "state_label": "Side to move:",
+      "initialization": "separate native word embeddings; numeric live board inputs"
+    },
+    "encoder": "semantic",
+    "reward_config": {
+      "version": "stockfish_dominant_exploration_v2",
+      "malformed": -2.0,
+      "illegal_base": -1.0,
+      "legal_min": 1.0,
+      "legal_max": 2.0,
+      "exact_base": 2.0,
+      "exact_bonus": 8.0,
+      "fixed_advantage_scale": 2.0,
+      "ordinary_advantage_clip": 2.0,
+      "match_gradient_share": 0.8,
+      "default_shaping_weight": 1.0,
+      "illegal_advantage_floor": -1.0
+    },
+    "shared_prefix": true,
+    "batched_rollouts": true,
+    "batched_scoring": true,
+    "max_update_rms": 1e-05,
+    "max_policy_logprob_change": 0.5,
+    "policy_temperature": 1.2,
+    "exploration_epsilon": 0.08,
+    "position_offset": 3500,
+    "initialization": "encoder and LoRA weights from a verified RL checkpoint; fresh Adam state for a new stage; no supervised adapter",
+    "optimizer": "Adam",
+    "learning_rate": 1e-05,
+    "entropy": 0.01,
+    "uniform_kl": 0.02,
+    "samples": 8,
+    "max_tokens": 48,
+    "seed": 2026103110,
+    "planned_groups": 6500,
+    "completed_groups": 205,
+    "optimizer_updates": 190,
+    "model_id": "LiquidAI/LFM3-1.7B",
+    "model_revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+    "quantization": {
+      "bits": 8,
+      "mode": "affine",
+      "group_size": 64
+    },
+    "computation_dtype": "float32",
+    "hardware": {
+      "machine": "MacBook Air",
+      "chip": "Apple M4",
+      "unified_memory_gb": 16
+    },
+    "overall_position": 3705,
+    "parent_completed_groups": 3500,
+    "parent_optimizer_updates": 467,
+    "engine": {
+      "id": {
+        "name": "Stockfish 19",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "sha256": "524bb2fe474ed6c5bbc49b4edd05f76d8df09e189bded31c74f52e417ba6aa27",
+      "nodes": 40000,
+      "threads": 1,
+      "hash_mb": 64
+    }
+  }
+}

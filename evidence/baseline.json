@@ -1,0 +1,54 @@
+{
+  "historical_source": ".artifacts/chess/scale-v1/original-development/report.json",
+  "historical_source_sha256": "4c873e1363e4e379eccfdbb3c8c84a6cdbf24385a735513a5a550acdfc326677",
+  "extraction_scope": "Initial-model semantic-encoder evaluation; omitted per-response records and reward histogram.",
+  "result": {
+    "positions": 50000,
+    "samples": 50000,
+    "ended": 50000,
+    "format_valid": 50000,
+    "legal": 3372,
+    "accepted": 3372,
+    "exact_match": 236,
+    "by_color": {
+      "white": {
+        "samples": 25000,
+        "legal": 2055,
+        "exact_match": 181
+      },
+      "black": {
+        "samples": 25000,
+        "legal": 1317,
+        "exact_match": 55
+      }
+    },
+    "by_phase": {
+      "opening": {
+        "ended": 10000,
+        "format_valid": 10000,
+        "legal": 870,
+        "accepted": 870,
+        "exact_match": 82,
+        "samples": 10000
+      },
+      "middlegame": {
+        "ended": 25000,
+        "format_valid": 25000,
+        "legal": 1787,
+        "accepted": 1787,
+        "exact_match": 85,
+        "samples": 25000
+      },
+      "endgame": {
+        "ended": 15000,
+        "format_valid": 15000,
+        "legal": 715,
+        "accepted": 715,
+        "exact_match": 69,
+        "samples": 15000
+      }
+    },
+    "complete": true,
+    "peak_memory_gb": 2.606837696
+  }
+}

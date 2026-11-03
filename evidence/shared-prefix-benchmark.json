@@ -1,0 +1,34 @@
+{
+  "historical_source": ".artifacts/chess/semantic-scoring-system-v2/report.json",
+  "historical_source_sha256": "283f3f06711edda3b583e79cbfcece62e3e7b7ac72ce0f6acddb7d72e224a2d3",
+  "extraction_scope": "Timing, parity and provenance only; omitted board, tokens, logits and response records.",
+  "result": {
+    "passed": true,
+    "gradient_parity": {
+      "relative_l2_error": 2.9190878671743685e-05,
+      "loss_error": 3.7670135498046875e-05,
+      "full_forward_seconds": 11.983483041985892,
+      "shared_prefix_seconds": 3.9378712499747053,
+      "speedup": 3.04313734027309
+    },
+    "data_sha256": "bbddb4785609e8fc0e807251337c1e2b749792ff95741534e33e26df6bae9aa8",
+    "runtime_sha256": "182537ef2ee92e412f19183da8f4e56727987dad053d2ee1fde56c52984b681b",
+    "model_hashes": {
+      "model.safetensors": "c5c4728a6848517b053e61d40ec705c2684c2cd9bc266a209edd0ebf379b92a2"
+    },
+    "samples": 8,
+    "max_logprob_error": 5.14984130859375e-05,
+    "repeat_error": 0.0,
+    "speedup": 3.6026435205789418,
+    "peak_memory_gb": 5.353882943,
+    "source_hashes": {
+      "benchmark_rl_scoring.py": "c9f8911f3482317f48ec52392daef0d468fb59b0abf2156decc2e6a2d9e43579",
+      "rl_scoring.py": "f595ba4bfbeb41be3d9100ef5ade614db47f396b6b95e4ec657d8b8cd907a418",
+      "train_rl.py": "1be8133cfa241acc405261793812a43b7090cc5b6dbaced6418de9d56e2e249c",
+      "board_encoder.py": "4d74cb7cbe106f2f3b10803f893bf5c86a5784312c15c531969d3ec1a470f83a",
+      "semantic_board_encoder.py": "9ad91fc16f0cfaf8b6df5a5e02da61cfedad3779741c803c050e0070f7dbce5b",
+      "rl_policy.py": "62104bd2f61d92c290adb33432a41e5cd41ecf079ad9fee2961e10d47f7d7ca0"
+    },
+    "scope": "Real-model system parity and timing, no parameter updates. Timing under concurrent workloads is only indicative."
+  }
+}
